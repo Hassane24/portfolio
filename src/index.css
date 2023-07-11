@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+:root {
+  --background-light: #dee1fc;
+  --primary-light: #8f97f5;
+  --secondary-light: #bec3f9;
+  --accent-light: #1424d7;
+  --text-light: #030621;
+  --background-dark: #050505;
+  --primary-dark: #8f97f5;
+  --secondary-dark: #04082f;
+  --accent-dark: #737ef2;
+  --text-dark: #fafafa;
+}
+
+*::after,
+*::before,
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
