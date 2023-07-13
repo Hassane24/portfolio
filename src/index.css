@@ -11,6 +11,7 @@
   --secondary-dark: #04082f;
   --accent-dark: #737ef2;
   --text-dark: #fafafa;
+  --navbar-height: 5rem;
 }
 
 *::after,
@@ -19,10 +20,17 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Roboto", sans-serif;
+  font-size: calc(15px + 0.390625vw);
   background-color: var(--background-light);
   color: var(--text-light);
 }
