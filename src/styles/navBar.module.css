@@ -1,11 +1,16 @@
+.navbar {
+  background-color: var(--secondary-light);
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+  justify-content: flex-end;
+}
+
 .navbar > ul {
   list-style-type: none;
   display: flex;
   column-gap: 5rem;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 2rem;
-  margin-left: auto;
 }
 
 .listitem {
