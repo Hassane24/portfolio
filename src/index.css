@@ -29,8 +29,14 @@ body,
 }
 
 body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   font-family: "Roboto", sans-serif;
   font-size: calc(15px + 0.390625vw);
   background-color: var(--background-light);
   color: var(--text-light);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
