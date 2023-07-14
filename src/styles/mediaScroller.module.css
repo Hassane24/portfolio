@@ -1,0 +1,81 @@
+.media_scroller {
+  height: calc(100% - var(--navbar-height));
+  display: grid;
+  margin-top: var(--navbar-height);
+  grid-auto-flow: column;
+  grid-auto-columns: 98%;
+
+  position: relative;
+}
+
+.media_scroller > * {
+  width: 100vw;
+}
+
+.dots_container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+}
+
+.dot_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-light);
+  transition: background-color 500ms ease-in-out;
+}
+
+.dot:hover {
+  background-color: var(--accent-light);
+  opacity: 0.8;
+}
+
+.dot.fill_dot {
+  background-color: var(--accent-light);
+}
+
+.dot_text {
+  font-style: italic;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.dot_text.show_dot_text {
+  opacity: 1;
+  transform: translateY(-300%);
+}
+
+.prev_arrow,
+.next_arrow {
+  cursor: pointer;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: auto 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.prev_arrow {
+  left: 0;
+}
+
+.next_arrow {
+  right: 0;
+}
+
+.prev_arrow > svg > path,
+.next_arrow > svg > path {
+  fill: var(--text-light);
+}
