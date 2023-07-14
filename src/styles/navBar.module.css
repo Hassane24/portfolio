@@ -3,6 +3,9 @@
   height: var(--navbar-height);
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  min-width: 100vw;
   padding-right: 2rem;
   justify-content: flex-end;
 }
