@@ -1,12 +1,12 @@
 import styles from "./App.module.css";
-import { LandingPage } from "./components/LandingPage";
+import { MediaScroller } from "./components/MediaScroller";
 import { NavBar } from "./components/NavBar";
 
 function App() {
   return (
     <div className={styles.app}>
       <NavBar />
-      <LandingPage />
+      <MediaScroller />
     </div>
   );
 }
