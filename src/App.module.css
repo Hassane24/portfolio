@@ -1,6 +1,8 @@
 .app {
   height: 100%;
   overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .app::-webkit-scrollbar {

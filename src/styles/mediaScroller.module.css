@@ -3,13 +3,13 @@
   display: grid;
   margin-top: var(--navbar-height);
   grid-auto-flow: column;
-  grid-auto-columns: 98%;
-
+  min-width: 400vw;
   position: relative;
 }
 
 .media_scroller > * {
   width: 100vw;
+  scroll-snap-align: start;
 }
 
 .dots_container {
@@ -44,6 +44,7 @@
 }
 
 .dot_text {
+  pointer-events: none;
   font-style: italic;
   font-weight: bold;
   opacity: 0;
@@ -63,7 +64,6 @@
   top: 50%;
   transform: translate(0, -50%);
   margin: auto 10px;
-  height: 30px;
   width: 30px;
 }
 
@@ -78,4 +78,18 @@
 .prev_arrow > svg > path,
 .next_arrow > svg > path {
   fill: var(--text-light);
+}
+
+.page_name {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: calc(12px + 0.390625vw);
+  right: 1rem;
+  margin-right: 0.5rem;
+}
+
+.prev_arrow > .page_name {
+  margin-left: 0.5rem;
+  left: 1rem;
 }

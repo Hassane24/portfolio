@@ -4,9 +4,9 @@ export const NavBar = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
-        <NavLink linkName="About" />
-        <NavLink linkName="Projects" />
-        <NavLink linkName="Contact" />
+        <NavLink linkName="About" id="1" />
+        <NavLink linkName="Projects" id="2" />
+        <NavLink linkName="Contact" id="3" />
       </ul>
     </nav>
   );

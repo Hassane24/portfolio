@@ -4,7 +4,7 @@ export const LandingPage = ({ name }: { name: string }) => {
   const [animate, setAnimate] = useState(false);
   useEffect(() => setAnimate(true), []);
   return (
-    <section className={styles.container} data-name={name}>
+    <section className={styles.container} data-name={name} data-number="0">
       <span className={`${styles.name} ${animate ? styles.animate : ""}`}>
         Hassane Ben
       </span>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/navBar.module.css";
-export const NavLink = ({ linkName }: { linkName: string }) => {
+export const NavLink = ({ linkName, id }: { linkName: string; id: string }) => {
   const [hovered, setHovered] = useState(false);
   const showLinkName = () => setHovered(true);
   const hideLinkName = () => setHovered(false);
@@ -8,6 +8,7 @@ export const NavLink = ({ linkName }: { linkName: string }) => {
   return (
     <a
       href={`#${linkName}`}
+      id={id}
       className={styles.listitem}
       onMouseEnter={showLinkName}
       onMouseLeave={hideLinkName}
