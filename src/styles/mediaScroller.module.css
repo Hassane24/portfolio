@@ -87,6 +87,7 @@
   font-size: calc(12px + 0.390625vw);
   right: 1rem;
   margin-right: 0.5rem;
+  transition: opacity 300ms ease-in-out;
 }
 
 .prev_arrow > .page_name {

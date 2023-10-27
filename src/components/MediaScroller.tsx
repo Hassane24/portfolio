@@ -6,10 +6,12 @@ import { LandingPage } from "./LandingPage";
 import { Projects } from "./Projects";
 import { ScrollerDot } from "./ScorllerDot";
 
-const pages = ["Home", "About me", "Projects", "Contact"];
+const pages = ["Home", "About", "Projects", "Contact"];
 
 export const MediaScroller = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showPrevPageName, setShowPrevPageName] = useState(false);
+  const [showNextPageName, setShowNextPageName] = useState(false);
   const pagesRef = useRef<NodeListOf<Element> | null>(null);
   useEffect(() => {
     const appDiv = document.querySelector("div#root > div") as HTMLElement;
@@ -120,6 +122,9 @@ export const MediaScroller = () => {
     });
   };
 
+  const revealPrevPageName = () => setShowPrevPageName(!showPrevPageName);
+  const revealNextPageName = () => setShowNextPageName(!showNextPageName);
+
   return (
     <main className={styles.media_scroller}>
       <LandingPage name="Home" />
@@ -129,6 +134,8 @@ export const MediaScroller = () => {
 
       <div className={styles.next_arrow} onClick={handleNext}>
         <svg
+          onMouseEnter={revealNextPageName}
+          onMouseLeave={revealNextPageName}
           xmlns="http://www.w3.org/2000/svg"
           height="30"
           viewBox="0 96 960 960"
@@ -136,7 +143,10 @@ export const MediaScroller = () => {
         >
           <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
         </svg>
-        <div className={styles.page_name}>
+        <div
+          className={styles.page_name}
+          style={{ opacity: showNextPageName ? "1" : "0" }}
+        >
           {pages.length - 1 === currentIndex
             ? pages[0]
             : pages[currentIndex + 1]}
@@ -145,6 +155,8 @@ export const MediaScroller = () => {
 
       <div className={styles.prev_arrow} onClick={handlePrevious}>
         <svg
+          onMouseEnter={revealPrevPageName}
+          onMouseLeave={revealPrevPageName}
           xmlns="http://www.w3.org/2000/svg"
           height="30"
           viewBox="0 96 960 960"
@@ -152,7 +164,10 @@ export const MediaScroller = () => {
         >
           <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
         </svg>
-        <div className={styles.page_name}>
+        <div
+          className={styles.page_name}
+          style={{ opacity: showPrevPageName ? "1" : "0" }}
+        >
           {currentIndex === 0
             ? pages[pages.length - 1]
             : pages[currentIndex - 1]}
