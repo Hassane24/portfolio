@@ -16,13 +16,11 @@ export const ScrollerDot = ({
   const showDotText = () => setHovered(true);
   const hideDotText = () => setHovered(false);
   return (
-    <div
-      className={styles.dot_container}
-      onMouseLeave={hideDotText}
-      onMouseEnter={showDotText}
-    >
+    <div className={styles.dot_container}>
       <div
         onClick={clickHandler}
+        onMouseLeave={hideDotText}
+        onMouseEnter={showDotText}
         className={`${styles.dot} ${onThatDot ? styles.fill_dot : ""}`}
       ></div>
       <div
