@@ -6,17 +6,17 @@ export const NavLink = ({ linkName, id }: { linkName: string; id: string }) => {
   const hideLinkName = () => setHovered(false);
 
   return (
-    <a
-      href={`#${linkName}`}
-      id={id}
-      className={styles.listitem}
-      onMouseEnter={showLinkName}
-      onMouseLeave={hideLinkName}
-    >
-      <li className={`${styles.link} ${hovered ? styles.hide : ""}`}>
+    <a href={`#${linkName}`} id={id} className={styles.listitem}>
+      <li
+        onMouseEnter={showLinkName}
+        className={`${styles.link} ${hovered ? styles.hide : ""}`}
+      >
         {linkName}
       </li>
-      <div className={`${styles.link_name} ${hovered ? styles.show : ""}`}>
+      <div
+        onMouseLeave={hideLinkName}
+        className={`${styles.link_name} ${hovered ? styles.show : ""}`}
+      >
         {linkName}
       </div>
     </a>
