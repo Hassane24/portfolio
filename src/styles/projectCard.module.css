@@ -1,0 +1,76 @@
+.project {
+  display: flex;
+  height: calc(100vh - var(--navbar-height));
+  position: relative;
+  scroll-snap-align: start;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_holder {
+  position: absolute;
+  aspect-ratio: 2;
+  right: 30%;
+  width: 60%;
+}
+
+.image_holder > img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.info_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary-light);
+  padding: 2rem;
+}
+
+.info_container > p {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary-light);
+}
+
+.project_name {
+  margin: 0;
+  position: absolute;
+  top: -2rem;
+  left: 5%;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-light);
+}
+
+.project > div:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  box-shadow: 0 1px 2px rgba(20, 36, 215, 0.1), 0 2px 4px rgba(20, 36, 215, 0.1),
+    0 4px 8px rgba(20, 36, 215, 0.1), 0 8px 16px rgba(20, 36, 215, 0.1),
+    0 16px 32px rgba(20, 36, 215, 0.1), 0 32px 64px rgba(20, 36, 215, 0.1);
+}
+
+.links_container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.links_container > a > button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--accent-light);
+  transition: all 300ms ease-in-out;
+}
+
+.links_container > a > button:hover {
+  transform: scale(1.1);
+  background-color: rgba(20, 36, 215, 0.8);
+}
