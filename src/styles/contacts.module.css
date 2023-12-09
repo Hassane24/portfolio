@@ -1,1 +1,68 @@
+.contact_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+.contact_container > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.input {
+  width: 50%;
+  position: relative;
+}
+
+.input > input,
+.input > textarea {
+  width: 100%;
+  height: 2rem;
+  padding: 0.5rem;
+  outline: none;
+  font-size: calc(15px + 0.390625vw);
+}
+
+.message > textarea {
+  resize: none;
+  height: 10rem;
+}
+
+.send_email_button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--background-light);
+  gap: 0.5rem;
+}
+
+.send_text {
+  font-size: calc(15px + 0.390625vw);
+  position: relative;
+}
+
+.send_text > span:last-of-type,
+.send_text > span:first-of-type {
+  display: block;
+  transition: all ease-in-out 300ms;
+}
+
+.send_text > span:last-of-type {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.send_email_button > img {
+  transition: transform ease-in-out 300ms;
+}
+
+.arrow_icon {
+  transform: rotate(45deg);
+}
