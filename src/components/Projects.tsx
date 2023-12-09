@@ -9,8 +9,9 @@ export const Projects = ({ name }: { name: string }) => {
       id="Projects"
       className={styles.projects_section}
     >
-      {projectsInfo.map((project) => (
+      {projectsInfo.map((project, index) => (
         <ProjectCard
+          key={index}
           projectName={project.projectName}
           projectInfo={project.projectInfo}
           projectPic={project.projectPic}
